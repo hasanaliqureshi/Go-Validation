@@ -35,7 +35,7 @@ func (s *validate) maxLength(length int) *validate {
 	return s
 }
 
-func (s *validate) isNotEmail() *validate {
+func (s *validate) isEmail() *validate {
 	if s.r == true {
 		re := regexp.MustCompile("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")
 		var match = re.MatchString(s.i)

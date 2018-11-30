@@ -15,6 +15,6 @@ func validator(u string) validate {
 }
 
 func main() {
-	newInput := validator("golangValidation")
-	println(newInput.Required().oneLowerCase().oneUpperCase().oneNumber().isSpecialCharacter().check())
+	newInput := validator("golangV$alidation")
+	println(newInput.Required().isSpecialCharacter().check())
 }
