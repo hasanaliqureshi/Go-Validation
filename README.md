@@ -15,7 +15,7 @@ I've created this helping script for my APIs to deal with user inputs. Just clon
 
 2. Apply the methods
 
-   `newInput.Required().oneLowerCase().check()`     `// will return true or false` 
+   `userInput.Required().oneLowerCase().check()`     `// will return true or false` 
 
 
 
@@ -36,4 +36,12 @@ use `.check()` after all methods to return the `boolean` value, otherwise the me
 | oneNumber          | return `false` if input value doesn't have at least one number character |
 | isSpecialCharacter | return `false` if input value doesn't have at least one special character |
 
+## Using Multiple Methods:
 
+I've design the methods in a way that multiple methods can be used in a line.
+
+For example to check for a strong password you can use.
+
+`userInput.minLength(8).oneLowerCase().oneUpperCase().oneNumber().isSpecialCharacter().check()`
+
+The above code will check for the applied methods and will return boolean `false` if any method doesn't validate the password.
